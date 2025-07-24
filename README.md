@@ -29,7 +29,8 @@ npm install
 ---
 
 ### 3. Iniciar el backend con JSON Server
-
+Primero debes moverte desde la carpeta raíz del proyecto a la carpeta hcya-challenge-api.
+cd hcya-challenge-api
 El proyecto utiliza `json-server` para simular un backend REST. Si no lo tenés instalado globalmente, podés hacerlo con:
 
 ```bash
@@ -51,6 +52,7 @@ Esto levantará un servidor local en `http://localhost:3001` con la data del arc
 ### 4. Levantar el frontend
 
 Con el backend funcionando, corré:
+cd hcya-challenge-app
 
 ```bash
 npm i (para instalar los paquetes necesarios)
