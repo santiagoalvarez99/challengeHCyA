@@ -12,7 +12,7 @@ const initialState: TabsState = {
   activeTabId: "",
 };
 
-export const tabsSlice = createSlice({
+const tabsSlice = createSlice({
   name: "tabs",
   initialState,
   reducers: {
@@ -33,8 +33,18 @@ export const tabsSlice = createSlice({
           state.tabs.length > 0 ? state.tabs[state.tabs.length - 1].id : "";
       }
     },
+    updateTabState: (
+      state,
+      action: PayloadAction<{ id: string; newState: unknown }>
+    ) => {
+      const tab = state.tabs.find((tab) => tab.id === action.payload.id);
+      if (tab) {
+        tab.state = action.payload.newState;
+      }
+    },
   },
 });
 
-export const { addTab, setActiveTab, closeTab } = tabsSlice.actions;
+export const { addTab, setActiveTab, closeTab, updateTabState } =
+  tabsSlice.actions;
 export default tabsSlice.reducer;

@@ -1,5 +1,4 @@
-import axios from "axios";
-import type { AxiosInstance } from "axios";
+import axios, { type AxiosInstance } from "axios";
 
 export interface Product {
   id: string;
@@ -7,10 +6,14 @@ export interface Product {
   price: number;
   stock: number;
   categoryId: string;
+  categoryName: string;
   description: string;
   sku: string;
   brandId: number;
+  brandName: string;
   subcategoryId: number;
+  subcategoryName: string;
+  supercategoryId: string;
 }
 
 export class ProductService {

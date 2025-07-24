@@ -2,7 +2,6 @@ import { Tabs, Tab, Box } from "@mui/material";
 import { Close } from "@mui/icons-material";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { setActiveTab, closeTab } from "../../store/tabs/tabsSlice";
-import { sidebarItems } from "../Layout/SidebarItems";
 
 export default function TabContainer() {
   const { tabs, activeTabId } = useAppSelector((state) => state.tabs);
@@ -21,7 +20,7 @@ export default function TabContainer() {
             key={tab.id}
             label={
               <Box display="flex" alignItems="center">
-                {tab.label}
+                {tab.title}
                 <Box
                   component="span"
                   onClick={(e) => {
@@ -34,7 +33,7 @@ export default function TabContainer() {
                     display: "flex",
                     alignItems: "center",
                   }}
-                  aria-label={`Cerrar ${tab.label}`}
+                  aria-label={`Cerrar ${tab.title}`}
                   role="button"
                   tabIndex={0}
                   onKeyDown={(e) => {
@@ -56,10 +55,7 @@ export default function TabContainer() {
       <Box flexGrow={1} overflow="auto" p={2}>
         {tabs.map((tab) => {
           if (tab.id !== activeTabId) return null;
-          const activeItem = sidebarItems.find((item) => item.id === tab.id);
-          return activeItem ? (
-            <Box key={tab.id}>{activeItem.component}</Box>
-          ) : null;
+          return <Box key={tab.id}>{tab.component}</Box>;
         })}
       </Box>
     </Box>

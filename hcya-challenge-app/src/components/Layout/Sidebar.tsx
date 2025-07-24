@@ -27,10 +27,15 @@ export default function Sidebar({
 }: SidebarProps) {
   const dispatch = useAppDispatch();
 
-  const handleOpenTab = (id: string, label: string) => {
-    dispatch(addTab({ id, label }));
+  const handleOpenTab = (id: string) => {
+    const item = sidebarItems.find((item) => item.id === id);
+    if (item) {
+      dispatch(
+        addTab({ id: item.id, title: item.label, component: item.component })
+      );
+    }
   };
-  
+
   return (
     <Drawer
       variant="permanent"
@@ -65,10 +70,7 @@ export default function Sidebar({
 
       <List>
         {sidebarItems.map(({ id, label, icon }) => (
-          <ListItemButton
-            key={id}
-            onClick={() => handleOpenTab(id, label)}
-          >
+          <ListItemButton key={id} onClick={() => handleOpenTab(id)}>
             <ListItemIcon>{icon}</ListItemIcon>
             {open && <ListItemText primary={label} />}
           </ListItemButton>

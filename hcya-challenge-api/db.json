@@ -137,17 +137,15 @@
       "imgUrl": "https://m.media-amazon.com/images/I/71ZoDT7a2wL._AC_SL1500_.jpg"
     },
     {
-      "id": "2",
       "name": "iPhone 15 Pro",
-      "description": "Smartphone Apple con chip A17",
-      "brandId": 2,
-      "subcategoryId": 1,
-      "supercategoryId": 1,
-      "categoryId": 1,
       "price": 1199,
       "stock": 20,
-      "sku": "APP-IPH15",
-      "imgUrl": "https://tse1.mm.bing.net/th/id/OIP.PziVpdEcFefEpY0N6I0WEwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      "brandId": 2,
+      "categoryId": "1",
+      "subcategoryId": 1,
+      "description": "",
+      "sku": "",
+      "id": "2"
     },
     {
       "id": "3",
@@ -200,19 +198,6 @@
       "stock": 12,
       "sku": "SAM-FR350",
       "imgUrl": "https://jumboargentina.vtexassets.com/arquivos/ids/471958-800-auto?v=636693855439500000&width=800&height=auto&aspect=true"
-    },
-    {
-      "id": "7",
-      "name": "Microondas Sony HeatWave",
-      "description": "Microondas digital 25L",
-      "brandId": 3,
-      "subcategoryId": 6,
-      "supercategoryId": 2,
-      "categoryId": 3,
-      "price": 199,
-      "stock": 30,
-      "sku": "SON-MW25",
-      "imgUrl": "https://th.bing.com/th/id/R.339f902ebcca91355aea6933832ecef3?rik=e2tOmrNmghCpFg&pid=ImgRaw&r=0"
     },
     {
       "id": "8",
@@ -306,17 +291,15 @@
       "imgUrl": "https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BGHZ_STG/on/demandware.static/-/Sites-master-catalog-tricot/default/dw24ca2bbe/images/large/MD610725-2.jpg?sw=1000&sh=1000&sm=fit&q=100&strip=false"
     },
     {
-      "id": "15",
       "name": "QuickWave",
-      "description": "QuickWave Microondas",
-      "brandId": 1,
-      "subcategoryId": 6,
-      "supercategoryId": 2,
-      "categoryId": 3,
-      "price": 1392.12,
+      "price": 1392,
       "stock": 87,
-      "sku": "SAM-MIC-015",
-      "imgUrl": "https://petenattiar.vtexassets.com/arquivos/ids/203958-800-800?v=637932457030430000&width=800&height=800&aspect=true"
+      "brandId": 1,
+      "categoryId": "3",
+      "subcategoryId": 5,
+      "description": "",
+      "sku": "",
+      "id": "15"
     },
     {
       "id": "16",
@@ -772,6 +755,17 @@
       "stock": 51,
       "sku": "MF-JEA-050",
       "imgUrl": "https://tse2.mm.bing.net/th/id/OIP.m30Bj9YHZOfgi22LskoRxwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+      "name": "iPhone 16 pro max",
+      "price": 1500,
+      "stock": 1,
+      "brandId": 2,
+      "categoryId": "1",
+      "subcategoryId": 1,
+      "description": "",
+      "sku": "",
+      "id": "_jDM9fZ"
     }
   ]
 }

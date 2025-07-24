@@ -1,5 +1,4 @@
-import axios from "axios";
-import type { AxiosInstance } from "axios";
+import axios, { type AxiosInstance } from "axios";
 
 export interface Brand {
   id: string;
