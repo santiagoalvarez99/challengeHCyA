@@ -1,63 +1,93 @@
-### HCyA Frontend Challenge
+# 🛍️ Productos App - Administración de Catálogo
 
-# 🎯 Objetivo
-Construir una interfaz de usuario moderna, funcional y responsiva para la administración de productos, consumiendo una API REST. 
+Aplicación web para la gestión de productos, utilizando React y MUI. Permite crear, editar, listar y filtrar productos con persistencia de estado por pestaña y validaciones dinámicas en formularios.
 
-Recursos
-La app está inicializada con React, Vite y Typescript. Se encuentra configurado el store con Redux Toolkit y se disponen los servicios para consumir la API. La API es un JSON Server de fácil instalación local lista para consumir.
+---
 
+## 🚀 Instrucciones para correr el proyecto
 
-# 🖥️ Funcionalidades requeridas
-📌 1. Menú lateral
-Menú lateral expandible y colapsable.
-- Cada ítem del menú debe abrirse en una nueva solapa (tab).
-- Las solapas deben mantener su estado, incluso si se cambia de pestaña (ej: filtros, datos cargados, campos editados).
+### 1. Clonar el repositorio
 
+```bash
+git clone https://github.com/santiagoalvarez99/challengeHCyA.git
+cd tu-repo
+```
 
-📌 2. Módulo de ABM de productos
-Implementar una interfaz que permita:
-✅ Obtener (listar)
+---
 
-✅ Crear
+### 2. Instalar dependencias
 
-✅ Editar
+Asegurate de tener [Node.js](https://nodejs.org/) instalado (v22.12.0 recomendado).
+Si no lo posee instalado, debe correr los siguientes scripts:
+nvm install v22.12.0
+nvm use v22.12.0
 
-✅ Eliminar productos
+```bash
+npm install
+```
 
+---
 
-Se valorarán los siguientes puntos con enfoque centrado en la experiencia de usuario:
-- La utilización de selectores múltiples que permitan concatenar filtros para:
-    Super-Categoría → Categoría → Subcategoría
-    Marca
+### 3. Iniciar el backend con JSON Server
 
-- Mostrar los productos en una tabla paginada que muestre de forma clara el total de resultados, propiedades, que permita ordenar y filtrar campos de texto por búsqueda parcial.
+El proyecto utiliza `json-server` para simular un backend REST. Si no lo tenés instalado globalmente, podés hacerlo con:
 
-- Abrir los formularios de creación/edición en modales o en un panel lateral/tab adicional.
+```bash
+npm install -g json-server
+```
 
-- Validar los campos requeridos (nombre, precio, stock, marca, categoría, subcategoría).
+Luego, ejecutá:
 
-- Mostrar mensajes claros al usuario ante operaciones exitosas, errores de validación o comunicación con el servidor. 
+```bash
+json-server --watch db.json --port 3001
+```
 
-- Alertar ante la posibilidad de salir de la sección y perder cambios no guardados.
+Esto levantará un servidor local en `http://localhost:3001` con la data del archivo `db.json`.
 
+````
 
-ℹ️ Podés agregar o quitar librerías que prefieras. Tenés total libertad para mostrar tus conocimientos.
+---
 
+### 4. Levantar el frontend
 
-# 📦 Formato de entrega
-El resultado del challenge debe entregarse mediante un repositorio público y una URL accesible en Internet:
-1. Repositorio en GitHub/GitLab/Bitbucket
-Debe contener:
-Todo el código fuente del proyecto frontend.
+Con el backend funcionando, corré:
 
+```bash
+npm i (para instalar los paquetes necesarios)
+npm run dev
+````
 
-Instrucciones para levantar en local.
-Plus (deseables que suman puntos):
-Un enlace al despliegue público de la aplicación.
-Opciones gratuitas:
-Vercel
-Netlify
-Render
-Glitch
+Esto iniciará la aplicación en modo desarrollo en `http://localhost:5173`.
 
+---
 
+## 📚 Librerías utilizadas
+
+| Paquete               | Descripción                                                     |
+| --------------------- | --------------------------------------------------------------- |
+| `@mui/x-data-grid`    | Componente de tabla avanzada para React (MUI DataGrid).         |
+| `react-hook-form`     | Manejo de formularios de forma eficiente, con validaciones.     |
+| `@hookform/resolvers` | Adaptadores para conectar librerías de validación (como `zod`). |
+| `zod`                 | Librería de validación de esquemas (tipos y restricciones).     |
+| `json-server`         | Simula una API REST rápida para desarrollo local.               |
+
+---
+
+## 🧩 Funcionalidades principales
+
+- 🗂️ Gestión de productos con operaciones CRUD.
+- 🧾 Formulario con validaciones en tiempo real.
+- 📑 Tabs dinámicos con persistencia de estado.
+- 🔎 Filtros encadenados: Supercategoría → Categoría → Subcategoría + Marca.
+- 📄 Listado paginado con ordenamiento.
+- ✅ Backend simulado con `json-server`.
+
+---
+
+## 🛠️ Scripts útiles
+
+| Script            | Descripción                       |
+| ----------------- | --------------------------------- |
+| `npm run dev`     | Inicia la app en modo desarrollo. |
+| `npm run build`   | Genera la versión optimizada.     |
+| `npm run preview` | Previsualiza la build localmente. |
